@@ -52,5 +52,5 @@ dagster dev
 Tests are in the `data_pipeline_tests` directory and you can run tests using `pytest`:
 
 ```bash
-pytest data_pipeline_tests
+pytest
 ```
