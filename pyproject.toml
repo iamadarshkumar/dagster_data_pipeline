@@ -1,0 +1,27 @@
+[project]
+name = "dagster_data_pipeline"
+version = "0.1.0"
+description = "Join bank transactions and get the corresponding city info"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "dagster",
+    "dagster-cloud",
+]
+
+[project.optional-dependencies]
+dev = [
+    "dagster-webserver", 
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+module_name = "data_pipeline.definitions"
+project_name = "data_pipeline"
+
+[tool.setuptools.packages.find]
+exclude=["data_pipeline_tests"]
