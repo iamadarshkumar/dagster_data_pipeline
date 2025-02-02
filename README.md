@@ -42,7 +42,9 @@ dagster dev
 ```
 
 5. Open http://localhost:3000 with your browser to see the project.
-6. Materialize all processes to create SQLite tables in databases/data.db
+   <img width="780" alt="image" src="https://github.com/user-attachments/assets/822294c0-9b40-49e4-8057-c094432ddc34" />
+
+7. Materialize all processes to create SQLite tables in `databases/dagster_data.db`
 
 
 ## Unit testing
