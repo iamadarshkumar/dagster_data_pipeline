@@ -1,18 +1,22 @@
 # Dagster Data Pipeline
 
-This is a [Dagster](https://dagster.io/) project: Dagster Data Pipeline
+This is a [Dagster](https://dagster.io/) project: ```Dagster Data Pipeline```.
+It uses a local SQLite3 database for storing and retrieving tables.
 
-# Datasets used
-1. Bank Transaction Dataset for Fraud Detection: (https://www.kaggle.com/datasets/valakhorasani/bank-transaction-dataset-for-fraud-detection)
-This dataset provides a detailed look into transactional behavior and financial activity patterns, ideal for exploring fraud detection and anomaly identification.
-2. US Zip Codes Database: (https://simplemaps.com/data/us-zips)
-Up-to-date database of US Zip Codes
+## Datasets used
+
+<b>1. Bank Transaction Dataset for Fraud Detection</b> : (https://www.kaggle.com/datasets/valakhorasani/bank-transaction-dataset-for-fraud-detection)
+<p>This dataset provides a detailed look into transactional behavior and financial activity patterns, ideal for exploring fraud detection and anomaly identification.</p>
+
+<b>2. US Zip Codes Database:</b> (https://simplemaps.com/data/us-zips)
+<p>
+Up-to-date database of US Zip Codes</p>
 
 
-# Here's what this data pipeline does:
-1. Read and transform bank_transactions_data
-2. Read and transform us_zips data
-3. Join the two datasets to get transaction logs along with states and populations for corresponding cities
+## Here's what this data pipeline does:
+1. Read and transform `bank_transactions_data`
+2. Read and transform `us_zips` data
+3. Join the two datasets to get transaction logs along with states and populations for corresponding cities.
 
 ## Getting started
 
@@ -41,7 +45,7 @@ dagster dev
 6. Materialize all processes to create SQLite tables in databases/data.db
 
 
-### Unit testing
+## Unit testing
 
 Tests are in the `data_pipeline_tests` directory and you can run tests using `pytest`:
 
