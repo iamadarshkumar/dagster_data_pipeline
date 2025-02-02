@@ -54,3 +54,19 @@ Tests are in the `data_pipeline_tests` directory and you can run tests using `py
 ```bash
 pytest
 ```
+
+## Limitations
+
+<b>Limited Scalability with SQLite:</b> 
+<br>The project uses SQLite3 which is a lightweight, serverless, and file-based database, and is great for small-scale applications, local development, or testing. However, it's not optimized for handling large amounts of concurrent users or high traffic. Additionally, partitioning is not supported in SQLite3 hence there was a partition simulation by creating an hourly column in `bank_transactions_data` table.
+
+<b>Data Processing Performance:</b>
+<br>The data processing is done using pandas in memory, which might be fine for small datasets but could lead to performance issues as the dataset grows. The system may run out of memory for large datasets.
+
+## Future Scope
+<b>Scalability:</b>
+<br>For production use or when dealing with larger datasets, we might need to transition to a more scalable relational database like PostgreSQL or MySQL.
+
+<b>Performance</b>
+<br>Distributed data processing frameworks like Apache Spark can be introduced to handle large-scale data processing.
+
